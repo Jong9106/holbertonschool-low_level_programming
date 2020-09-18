@@ -16,7 +16,7 @@ int main(void)
 		putchar((n / 10) + '0');
 		putchar((n % 10) + '0');
 
-		if (n != ((n % 9)) + '0')
+		if (n != 99)
 		{
 		putchar(',');
 		putchar(' ');
