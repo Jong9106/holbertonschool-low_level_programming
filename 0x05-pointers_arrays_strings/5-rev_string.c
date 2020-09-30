@@ -8,14 +8,18 @@
  */
 void rev_string(char *s)
 {
-	char x[] = "Holberton";
+	int contador, rev;
+	char temp;
 
-	s[0] = x[8];
-	s[1] = x[7];
-	s[2] = x[6];
-	s[3] = x[5];
-	s[5] = x[3];
-	s[6] = x[2];
-	s[7] = x[1];
-	s[8] = x[0];
+	for (contador = 0 ; s[contador] != '\0'; contador++)
+	{
+	}
+	contador--;
+	for (rev = 0 ; rev < contador ; rev++)
+	{
+	temp = s[rev];
+	s[rev] = s[contador];
+	s[contador] = temp;
+	contador--;
+	}
 }
