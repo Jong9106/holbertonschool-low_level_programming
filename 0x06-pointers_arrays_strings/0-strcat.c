@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * *_strcpy - Entry point
+ * *_strcat - Entry point
  * @dest: pointer
  * @src: entrada
  * Return: Always 0 (Success)
@@ -20,5 +20,5 @@ char *_strcat(char *dest, char *src)
 	dest[i] = src[j];
 	}
 dest[i] = '\0';
-return(dest);
+return (dest);
 }
