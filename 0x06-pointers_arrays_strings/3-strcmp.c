@@ -9,25 +9,17 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int cont1, cont2, resta;
+	int i;
 
-	for (cont1 = 0 ; s1[cont1] != '\0' ; cont1++)
+	for (i = 0 ; s1[i] != '\0' && s2[i] != '\0'; i++)
 	{
-		for (cont2 = 0 ; s2[cont2] != '\0' ; cont2++)
+		if (s1[i] == s2[i])
 		{
-		resta = s1[cont1] - s2[cont2];
-			if (resta < 0)
-			{
-			return (resta);
-			}
-			else if (resta > 0)
-			{
-			return (resta);
-			}
-			else
-			{
-			return (0);
-			}
+		return (0);
+		}
+		else
+		{
+		return (s1[i] - s2[i]);
 		}
 	}
 return (0);
