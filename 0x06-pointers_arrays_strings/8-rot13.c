@@ -8,20 +8,21 @@
  */
 char *rot13(char *s)
 {
-	int cont, cont2;
+	int cont = 0, cont2;
 
 	char n[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	char c[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char e[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-	for (cont = 0 ; s[cont] != '\0' ; cont++)
+	while (s[cont] != '\0')
 	{
-		for (cont2 = 0 ; cont2 <= 51 ; cont2++)
+		for (cont2 = 0 ; cont2 <= 52 ; cont2++)
 		{
-			if (s[cont] == c[cont2])
+			if (s[cont] == e[cont2])
 			{
 			s[cont] = n[cont2];
 			}
 		}
+	cont++;
 	}
 return (s);
 }
