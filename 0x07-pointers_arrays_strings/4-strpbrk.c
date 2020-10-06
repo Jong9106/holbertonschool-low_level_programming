@@ -1,24 +1,28 @@
 #include "holberton.h"
 
 /**
- * *_memcpy - Entry point
- * @dest: destino
- * @src: fuente
- * @n: byte const
+ * *_strpbrk - Entry point
+ * @s: string
+ * @accept: second string
  * Return: Always 0 (Success)
  */
 char *_strpbrk(char *s, char *accept)
 {
-	for (; ; s++)
+	int i, j;
+
+	for (i = 0 ; s[i] != '\0' ; s++)
 	{
-		for (; ; accept++)
-		if (*s == c)
+		for (j = 0 ; accept[j] != '\0' ; j++)
 		{
-		return (s);
-		}
-		else if (*s == '\0')
-		{
-		return ('\0');
+			if (s[i] == accept[j])
+			{
+			return (s);
+			}
+			else if (s[i] == '\0')
+			{
+			return ('\0');
+			}
 		}
 	}
+return ('\0');
 }
