@@ -1,28 +1,33 @@
 #include "holberton.h"
 
 /**
- * *_strpbrk - Entry point
- * @s: string
- * @accept: second string
+ * *_strstr - Entry point
+ * @haystack: string
+ * @needle: second string
  * Return: Always 0 (Success)
  */
-char *_strpbrk(char *s, char *accept)
-{
-	int i, j;
 
-	for (i = 0 ; s[i] != '\0' ; s++)
+char *_strstr(char *haystack, char *needle)
+{
+	int j, i;
+
+	for (i = 0 ; haystack ; i++)
 	{
-		for (j = 0 ; accept[j] != '\0' ; j++)
+		j = 0;
+		while (needle[j] != '\0' && haystack[i] == needle[j])
 		{
-			if (s[i] == accept[j])
+			j++;
+			i++;
+		}
+
+		if (j > 0)
+		{
+			i -= j;
+			if (needle[j] == '\0')
 			{
-			return (s);
-			}
-			else if (s[i] == '\0')
-			{
-			return ('\0');
+				return (haystack + i);
 			}
 		}
 	}
-return ('\0');
+	return ('\0');
 }
