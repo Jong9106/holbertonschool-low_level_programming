@@ -9,16 +9,16 @@
  * Return: Always 0 (Success)
  */
 
-int main(int argc, char *argv[]__attribute__((unused)))
+int main(int argc, char *argv[])
 {
 	int mult, x, y;
 
 	x = atoi(argv[1]);
 	y = atoi(argv[2]);
 
-	if (argc > 3)
+	if (argc  0)
 	{
-		printf("ERROR \n");
+		printf("Error \n");
 	}
 	else
 	{
