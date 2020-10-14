@@ -16,14 +16,11 @@ char *str_concat(char *s1, char *s2)
 	char *dest;
 
 	if (s1 == NULL)
-		s1_len = 0;
-	else
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 		for (s1_len = 0 ; s1[s1_len] != '\0' ; s1_len++)
 		;
-
-	if (s2 == NULL)
-		s2_len = 0;
-	else
 		for (s2_len = 0 ; s2[s2_len] != '\0' ; s2_len++)
 		;
 	sum = s1_len + s2_len + 1;
