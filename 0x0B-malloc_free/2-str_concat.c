@@ -7,7 +7,6 @@
  * *str_concat - Entry point
  * @s1: string 1
  * @s2: string 2
- *
  * Return: Always 0 (Success)
  */
 char *str_concat(char *s1, char *s2)
@@ -19,13 +18,15 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-		for (s1_len = 0 ; s1[s1_len] != '\0' ; s1_len++)
-		;
-		for (s2_len = 0 ; s2[s2_len] != '\0' ; s2_len++)
-		;
+	for (s1_len = 0 ; s1[s1_len] != '\0' ; s1_len++)
+	{
+	}
+	for (s2_len = 0 ; s2[s2_len] != '\0' ; s2_len++)
+	{
+	}
 	sum = s1_len + s2_len + 1;
 
-	dest = malloc(sizeof(*dest) * sum);
+	dest = malloc(sizeof(char) * sum);
 
 	if (dest == NULL)
 		return (NULL);
