@@ -6,7 +6,6 @@
 /**
  * *malloc_checked - Entry point
  * @b: variable to malloc
- * @void: malloc pointer
  * Return: Always 0 (Success)
  */
 void *malloc_checked(unsigned int b)
