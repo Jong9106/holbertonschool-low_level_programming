@@ -4,7 +4,6 @@
  * print_dog - Entry point
  *@d: pointer to dog
  *
- * Return: Always 0 (Success)
  */
 void print_dog(struct dog *d)
 {
@@ -12,7 +11,7 @@ void print_dog(struct dog *d)
 	{
 		if (d->name == NULL)
 		{
-			printf("nil\n");
+			printf("Name: (nil)\n");
 		}
 		else
 		{
@@ -21,11 +20,11 @@ void print_dog(struct dog *d)
 		printf("Age: %f\n", d->age);
 		if (d->owner == NULL)
 		{
-		printf("nil\n");
+			printf("Owner: (nil)\n");
 		}
 		else
 		{
-		printf("Owner: %s\n", d->owner);
+			printf("Owner: %s\n", d->owner);
 		}
 	}
 }
