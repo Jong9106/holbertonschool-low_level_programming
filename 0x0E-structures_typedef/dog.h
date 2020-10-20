@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
+
 #ifndef __DOG_H_
 #define __DOG_H_
+#include <stdio.h>
 
 /**
  * struct dog - structure for 0-main.c
