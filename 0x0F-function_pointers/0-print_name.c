@@ -2,14 +2,13 @@
 
 /**
  *print_name - prints a name
- *@name: ponter
+ *@name: pointer
  *@f: function pointer
  *
  */
-
 void print_name(char *name, void (*f)(char *))
 {
-	if (f != NULL || name != NULL)
+	if (f != NULL && name != NULL)
 	{
 		f(name);
 	}
