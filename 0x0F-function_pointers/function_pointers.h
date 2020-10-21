@@ -1,7 +1,7 @@
 #ifndef _F_H_
 #define _F_H_
 
-#include <stidio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 
