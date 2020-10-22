@@ -9,21 +9,27 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	char sign;
-
-	while (sign != s
-	{
-		return (NULL);
-	}
-
-	if
-	{
-		op_t ops[] ={
-        	{"+", op_add},
-        	{"-", op_sub},
-        	{"*", op_mul},
-        	{"/", op_div},
-        	{"%", op_mod},
-        	{NULL, NULL}
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
 		};
-    int i;
+
+	int i;
+
+	i = 0;
+	while (ops[i].op)
+	{
+		if (*ops[i].op == *s)
+		{
+			return (ops[i].f);
+		}
+
+		i++;
+	}
+	printf("Error\n");
+	exit(99);
+}
