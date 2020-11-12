@@ -15,14 +15,11 @@ int main(int argc, char **argv)
 		dprintf(2, "Usage: cp file_from file_to\n"),
 		exit(97);
 	file_from = open(argv[1], O_RDONLY);
-	if (file_from == -1 || argv[1] == NULL)
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]),
-		exit(98);
 	mem = malloc(sizeof(char) * BUFFER);
 	if (!mem)
 		exit(98);
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (file_to == -1 || argv[2] == NULL)
+	if (file_to == -1)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]),
 		exit(99);
 	f_read = read(file_from, mem, BUFFER);
