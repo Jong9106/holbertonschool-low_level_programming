@@ -6,7 +6,7 @@
  * @argv: name of the files
  * Return: 0 to success or -1 for error
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int file_from, file_to, f_read, f_write = 1;
 	char buffer[BUFFER];
@@ -14,12 +14,12 @@ int main(int argc, char **argv)
 	if (argc != 3)
 		dprintf(2, "Usage: cp file_from file_to\n"),
 		exit(97);
-	if (!argv[1])
+	if (argv[1] == NULL)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]),
 		exit(98);
-	if (!argv[2])
+	if (argv[2] == NULL)
 		dprintf(2, "Error: Can't write to file %s\n", argv[2]),
-		exit(99);
+		exit(97);
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	f_read = read(file_from, buffer, BUFFER);
