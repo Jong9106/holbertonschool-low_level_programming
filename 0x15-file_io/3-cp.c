@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]),
 		exit(98);
 	if (!argv[2])
-		dprintf(2, "Error: Can't write from file %s\n", argv[2]),
+		dprintf(2, "Error: Can't write to file %s\n", argv[2]),
 		exit(99);
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
