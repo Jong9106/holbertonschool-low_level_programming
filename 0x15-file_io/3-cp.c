@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int file_from, file_to, f_read, f_write;
+	int file_from, file_to, f_read, f_write, cl;
 	char *mem;
 
 	if (argc != 3)
@@ -37,12 +37,12 @@ int main(int argc, char **argv)
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]),
 			exit(98);
 	}
-	if (close(file_from) < 0)
-		dprintf(2, "Can't close fd %d\n", file_from),
-		exit(100);
-	if (close(file_to) < 0)
-		dprintf(2, "Can't close fd %d\n", file_to),
-		exit(100);
+	cl = close(file_from);
+	if (cl == -1)
+		dprintf(2, "Can't close fd %d\n", file_from), exit(100);
+	cl = close(file_to);
+	if (cl == -1)
+		dprintf(2, "Can't close fd %d\n", file_to), exit(100);
 	free(mem);
 	return (0);
 }
