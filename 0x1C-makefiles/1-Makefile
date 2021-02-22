@@ -1,4 +1,4 @@
 CC = gcc
-src = *.c
-all: $(src) m.h
-	$(CC) $(src) m.h -o holberton
+SRC = *.c
+all: $(SRC) m.h
+	$(CC) $(SRC) m.h -o holberton
