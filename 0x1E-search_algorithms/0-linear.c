@@ -19,7 +19,7 @@ int linear_search(int *array, size_t size, int value)
 
 	for (; array[i]; i++)
 	{
-		if (i >= size)
+		if (i > size)
 		{
 			return (-1);
 		}
