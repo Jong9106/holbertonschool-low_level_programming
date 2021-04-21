@@ -38,10 +38,6 @@ int interpolation_search(int *array, size_t size, int value)
 				{
 					return (i);
 				}
-				else
-				{
-					return (-1);
-				}
 			}
 		}
 		return (-1);
