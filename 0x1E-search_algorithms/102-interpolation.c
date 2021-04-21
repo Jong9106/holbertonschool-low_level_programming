@@ -13,7 +13,7 @@ int interpolation_search(int *array, size_t size, int value)
 	unsigned int low = 0, high = size - 1, i = 0;
 	size_t pos = 0;
 
-	if (array)
+	if (array || size > 0)
 	{
 		pos = low + (((double)(high - low) / (array[high] - array[low])) *
 					(value - array[low]));
@@ -28,22 +28,10 @@ int interpolation_search(int *array, size_t size, int value)
 			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 			return (pos);
 		}
-		else if (array[pos + 1 ] == value)
-		{
-			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-			for (i = pos + 1; i < size; i++)
-			{
-				printf("Value checked array[%d] = [%d]\n", i, array[i]);
-				if (array[i] == value)
-				{
-					return (i);
-				}
-			}
-		}
 		else
 		{
 			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-			for (i = pos - 1; i < size; i--)
+			for (i = pos + 1; i < size; i++)
 			{
 				printf("Value checked array[%d] = [%d]\n", i, array[i]);
 				if (array[i] == value)
