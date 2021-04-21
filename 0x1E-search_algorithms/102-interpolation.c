@@ -30,12 +30,9 @@ int interpolation_search(int *array, size_t size, int value)
 		else
 		{
 			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-			if (array[pos + 1] == value)
-			{
-				pos += 1;
-				printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-				return (pos);
-			}
+			pos += 1;
+			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
+			return (pos);
 		}
 	}
 	return (-1);
